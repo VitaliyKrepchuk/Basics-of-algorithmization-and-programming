@@ -1,0 +1,121 @@
+#include <iostream>
+#include<clocale>
+#include <math.h>
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "UKR");
+    double a, b, result;
+    int z;
+    int c, d, operation;
+    do
+    {
+        cout << "Виберiть операцiю, яку потрiбно виконати: \n";
+        cout << "1.Додати;\n";
+        cout << "2.Вiдняти;\n";
+        cout << "3.Помножити;\n";
+        cout << "4.Подiлити;\n";
+        cout << "5.Знайти середнє арифметичне;\n";
+        cout << "6.Дiлення по модулю;\n";
+        cout << "7.Дiлення нацiло;\n";
+        cout << "8.Знайти корiнь числа;\n";
+        cout << "9.Пiднести число до степеня;\n";
+        cin >> operation;
+        switch (operation) {
+        case 1:
+            cout << "Введiть два числа\n";
+            cout << "A=";
+            cin >> a;
+            cout << "B=";
+            cin >> b;
+            result = a + b;
+            cout << "Результат: " << result << endl;
+            cout << endl;
+            break;
+        case 2:
+            cout << "Введiть два числа\n";
+            cout << "A=";
+            cin >> a;
+            cout << "B=";
+            cin >> b;
+            result = a - b;
+            cout << "Результат: " << result << endl;
+            cout << endl;
+            break;
+        case 3:
+            cout << "Введiть два числа\n";
+            cout << "A=";
+            cin >> a;
+            cout << "B=";
+            cin >> b;
+            result = a * b;
+            cout << "Результат: " << result << endl;
+            cout << endl;
+            break;
+        case 4:
+            cout << "Введiть два числа\n";
+            cout << "A=";
+            cin >> a;
+            cout << "B=";
+            cin >> b;
+            result = a / b;
+            cout << "Результат: " << result << endl;
+            cout << endl;
+            break;
+        case 5:
+            cout << "Введiть два числа\n";
+            cout << "A=";
+            cin >> a;
+            cout << "B=";
+            cin >> b;
+            result = (a + b) / 2;
+            cout << "Результат: " << result << endl;
+            cout << endl;
+            break;
+        case 6:cout << "Введiть два цiлих числа\n";
+            cout << "A=";
+            cin >> c;
+            cout << "B=";
+            cin >> d;
+            result = c % d;
+            cout << "Результат: " << result << endl;
+            cout << endl;
+            break;
+        case 7:
+            cout << "Введiть два цiлих числа\n";
+            cout << "A=";
+            cin >> c;
+            cout << "B=";
+            cin >> d;
+            result = c / d;
+            cout << "Результат: " << result << endl;
+            cout << endl;
+            break;
+        case 8:
+            cout << "Введiть додатнє число\n";
+            cout << "A=";
+            cin >> a;
+            result = sqrt(a);
+            cout << "Результат: " << result << endl;
+            cout << endl;
+            break;
+        case 9:
+            cout << "Введiть число, яке потрiбно пiднести до степеня\n";
+            cin >> a;
+            cout << "Введiть степiнь до якого потрiбно пiднести це число\n";
+            cin >> b;
+            result = pow(a, b);
+            cout << "Результат: " << result << endl;
+            cout << endl;
+            break;
+        default:
+            cout << "Помилка! Потрiбно вибрати число вiд 1 до 9.\n";
+            cout << endl;
+            break;
+        }
+        cout << "Виконати ще одну дiю?\n";
+        cout << "1.Так;\n";
+        cout << "2.Нi;\n";
+        cin >> z;
+    } while (z == 1);
+}
