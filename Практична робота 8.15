@@ -1,0 +1,15 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+void demoauto();
+void main()
+{
+    int x = 10;
+    printf("\nX=%d", x);
+    demoauto();
+}
+void demoauto()
+{
+    int x = 20;
+    printf("\nX=%d", x);
+}
