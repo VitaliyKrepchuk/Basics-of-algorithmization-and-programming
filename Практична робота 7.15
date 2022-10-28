@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+void main()
+{
+    char str1[30],str2[30];
+    int i = 0;
+    printf("\nEnter The String : ");
+    cin >> str1;
+    while (str1[i] != '\0')
+    {
+        str2[i] = str1[i];
+        i++; 
+    }
+    str2[i] = '\0';
+    printf("\nCopied String : %s", str2);
+}
