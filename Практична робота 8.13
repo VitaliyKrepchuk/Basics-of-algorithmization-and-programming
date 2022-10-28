@@ -1,0 +1,25 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+int factorial (int);
+void main()
+{
+    int x, t;
+    printf("\nEnter The Number : ");
+    cin >> x;
+    t = factorial(x);
+    printf("\n%d!=%d", x, t);
+}
+int factorial(int n)
+{
+    int f;
+    if (n == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        f = n * factorial(n - 1);
+        return f;
+    }
+}
