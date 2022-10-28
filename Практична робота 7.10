@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+void main()
+{
+    char str[30]; 
+    printf("\nEnter The String : ");
+    cin >> str;
+    printf("\nEntered String : %s",str);
+}
