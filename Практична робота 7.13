@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+void main()
+{
+    char str[30],ch;
+    int i = 0, c = 0;
+    printf("\nEnter The String : ");
+    cin >> str;
+    printf("\nEnter The Character : ");
+    cin >> ch;
+    while (str[i] != '\0')
+    {
+        if (str[i] == ch)
+        {
+            c++;   
+        }
+        i++;
+    }
+    printf("\n%c Occurs %d times", ch, c);
+}
