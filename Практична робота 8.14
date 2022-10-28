@@ -1,0 +1,28 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+int fibo(int);
+int main()
+{
+    int x, i;
+    printf("\nEnter The n Term of Fibonacci Series : ");
+    cin >> x;
+    printf("\nFibonacci Series : ");
+    for (i = 0; i < x; i++)
+    {
+        printf("\n%d\t", fibo(i));
+    }
+    return 0;
+}
+int fibo(int n)
+{
+    if (n == 0)
+    {
+        return 0;
+    }
+    else if (n == 1)
+    {
+        return 1;
+    }
+    return fibo(n - 1) + fibo(n - 2);
+}
