@@ -1,0 +1,18 @@
+#include <iostream>
+#include <stdio.h>
+#include <string.h>
+using namespace std;
+void main()
+{
+    char s1[30], s2[30], t[30];
+    printf("\nEnter The String (S1): ");
+    cin >> s1;
+    printf("\nEnter The String (S2): ");
+    cin >> s2;
+    strcpy_s(t, s1);
+    strcpy_s(s1, s2);
+    strcpy_s(s2, t);
+    printf("\n**********************");
+    printf("\nAfter Swapping : ");
+    printf("\nS1 :%s \nS2 :%s", s1, s2);
+}
