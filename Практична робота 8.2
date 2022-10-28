@@ -1,0 +1,19 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+float div (float, float);
+void main()
+{
+    float a, b,d;
+    printf("\nEnter The Two numbers : ");
+    cin >> a;
+    cin >> b;
+    d = div(a, b);
+    printf("\nDivision : %f", d);
+}
+float div(float x,float y)
+{
+    float dv;
+    dv = (float)x / y;
+    return (dv);
+}
