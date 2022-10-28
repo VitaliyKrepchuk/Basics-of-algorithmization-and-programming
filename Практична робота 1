@@ -1,0 +1,13 @@
+#include<iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+	const double x = 0.3;
+	double m, n;
+	m = sin(x) + cos(x);
+	n = sqrt(m)+sin(x);
+	cout << "x= "<< x<< endl;
+	cout << "m= " << m << endl;
+	cout << "n= " << n << endl;
+}
