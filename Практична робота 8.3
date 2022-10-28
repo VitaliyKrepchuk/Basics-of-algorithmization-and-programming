@@ -1,0 +1,18 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+float area (float);
+int main()
+{
+    float r, a;
+    printf("\nEnter the Radius of Circle :");
+    cin >> r;
+    a = area(r);
+    printf("\nArea of Circle : %f", a);
+}
+float area(float r)
+{
+    float a;
+    a = 3.14 * r * r;
+    return (a);
+}
