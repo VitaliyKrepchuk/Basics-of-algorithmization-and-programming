@@ -1,0 +1,16 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+void demostatic();
+void main()
+{
+    demostatic();
+    demostatic();
+    demostatic();
+}
+void demostatic()
+{
+    static int x = 10;
+    x = x + 2;
+    printf("\nX=%d", x);
+}
