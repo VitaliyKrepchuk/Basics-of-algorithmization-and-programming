@@ -1,0 +1,18 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+int add(int, int);
+void main()
+{
+    int a, b,sum;
+    printf("\nEnter The Two numbers : ");
+    cin >> a;
+    cin >> b;
+    sum = add(a, b);
+    printf("\nAddition : %d", sum);
+}
+int add(int x, int y)
+{
+    int add = x + y;
+    return (add);
+}
