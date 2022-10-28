@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+void main()
+{
+    char str[30];
+    int i = 0, c = 0;
+    printf("\nEnter The String : ");
+    cin >> str;
+    while (str[i] != '\0')
+    {
+        c++;
+        i++;
+    }
+    printf("\nTotal characters in string : %d", c);
+}
