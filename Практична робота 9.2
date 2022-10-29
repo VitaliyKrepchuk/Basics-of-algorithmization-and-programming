@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int x = 18, * p, m;
+	p = &x; // результат:(*p) = 18
+	cout << "(*p) =" << *p << endl;
+	(*p) += 2;// результат: (*p) = (*p)+2=18+2=20 => x=20
+	cout << "x =" << x << endl;
+	m = (*p) / 5; // результат: m=20/5=4
+	cout << "m =" << m << endl;
+	p = &m; // результат: p містить адресу m, (*p) = 4
+	cout << "(*p) =" << *p << endl;
+	(*p) += 3; // результат: (*p)= (*p)+3 = 4 +3 =7 => m=7
+	cout << "m =" << m << endl;
+}
