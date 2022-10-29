@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int var = 10;
+    cout << "var = " << var << endl; //результат: var = 10
+    // оголошення та визначення посилання на змінну
+    int& p = var;
+    cout << "& p = " << &p << endl; //результат: &p = 00D9F7C8
+    cout << "p = " << p << endl; //результат: p = 10
+    p = 88;
+    cout << "p = " << p << endl; //результат: p = 88
+    cout << "var = " << var << endl; //результат:var = 88
+    // оголошення та визначення посилання на константу
+    const double& e = 2.72;
+}
