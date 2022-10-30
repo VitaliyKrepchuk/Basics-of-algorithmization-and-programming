@@ -1,0 +1,59 @@
+#include <iostream>
+#include <clocale>
+using namespace std;
+struct TBook // книга
+{
+	char title[20]; // назва книги
+	char author[20]; // автор книги
+};
+TBook katalog[10]; // масив книг
+void input(TBook[], int); // введення масиву книг
+void print(TBook[], int); // виведення масиву книг
+void sort(TBook[], int); // сортування масиву книг
+//----------------------- головна функцiя ------------------------------------------
+
+int main()
+{
+	int kol;
+	input(katalog, kol);
+	puts("list of books");
+	print(katalog, kol);
+	sort(katalog, kol); // сортування книжок по автору
+	puts("sorted books list ");
+	print(katalog, kol);
+	system("pause");
+}
+//----------------------- введення масиву книжок -------------------------------
+
+int input(TBook mas[])
+{
+	int n;
+	cout << "input number of books:"; cin >> n;
+	for (int j = 0; j < n; j++)
+	{
+		cout << "input titles:"; cin >> mas[j].title;
+		cout << "input autor:"; cin >> mas[j].author;
+	}
+	return n;
+}
+//----------------------- виведення масиву книжок -----------------------------
+
+void print(TBook mas[], int n)
+{
+	for (int j = 0; j < n; j++)
+		printf("%-22s %-22s \n", mas[j].title, mas[j].author);
+}
+//---------------------- сортування книжок по автору --------------------------
+
+void sort(TBook mas[], int n)
+{
+	TBook temp;
+	for (int k = 0; k < n - 1; k++)
+		for (int j = k + 1; j < n; j++)
+			if (strcmp(mas[k].author, mas[j].author) > 0)
+			{
+				temp = mas[k];
+				mas[k] = mas[j];
+				mas[j] = temp;
+			}
+}
