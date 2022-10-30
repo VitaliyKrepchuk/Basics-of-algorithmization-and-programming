@@ -1,0 +1,71 @@
+#include <iostream>
+#include <clocale>
+using namespace std;
+#define CIRCLE 1
+#define RECT 2
+#define TRIANGLE 3
+struct Tfigure
+{
+	int area, perimeter; // загальні компоненти
+	int type; // признак активного компонента
+	union
+	{
+		int radius; // коло
+		int a[2]; //прямокутник
+		int b[3]; // трикутник
+	} geom_fig;
+};
+Tfigure fig;
+void input();
+void output();
+int main()
+{
+	setlocale(LC_ALL, "UKR");
+	input();
+	output();
+	system("pause");
+}
+void input()
+{
+	do
+	{
+		cout << "Введiть тип графiчної фiгури :\n";
+		cout << "1.Коло\n";
+		cout << "2.Прямокутник\n";
+		cout << "3.Трикутник\n";
+		cin >> fig.type;
+	} while (fig.type < 1 || fig.type>3);
+	switch (fig.type)
+	{
+	case CIRCLE:
+		cout << "Введіть радiус :";
+		cin >> fig.geom_fig.radius;
+		break;
+	case RECT:
+		cout << "Введiть сторони прямокутника :\n";
+		cin >> fig.geom_fig.a[0] >> fig.geom_fig.a[1];
+		fig.area = fig.geom_fig.a[0] * fig.geom_fig.a[1];
+		break;
+	case TRIANGLE:
+		cout << "Введiть сторони трикутника :\n ";
+		cin >> fig.geom_fig.b[0] >> fig.geom_fig.b[1] >> fig.geom_fig.b[2];
+		fig.perimeter = fig.geom_fig.b[0] + fig.geom_fig.b[1] + fig.geom_fig.b[2];
+		break;
+	default: cout << "Помилка!" << endl;
+	}
+}
+void output()
+{
+	switch (fig.type)
+	{
+	case CIRCLE:
+		cout << "Радiус :" << fig.geom_fig.radius << endl;
+		break;
+	case RECT:
+		cout << "Площа : " << fig.area << endl;
+		break;
+	case TRIANGLE:
+		cout << "Периметр : " << fig.perimeter << endl;
+		break;
+	}
+}
